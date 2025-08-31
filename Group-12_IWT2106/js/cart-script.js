@@ -1,0 +1,149 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItems = document.getElementById("cartItems");
+  const orderNow = document.getElementById("orderNow");
+  const receiptSection = document.getElementById("receiptSection");
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function renderCart() {
+    cartItems.innerHTML = "";
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = `<li class="list-group-item text-center text-danger">🛒 Your cart is empty.</li>`;
+      return;
+    }
+
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+      const price = parseFloat(item.price); // Ensure price is a number
+      const quantity = item.quantity || 1;
+      const itemTotal = price * quantity;
+      totalPrice += itemTotal;
+
+      const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center cart-item-hover";
+
+      li.innerHTML = `
+        <span>
+          <strong>${item.name}</strong>
+          <span class="text-muted small">x${quantity}</span>
+        </span>
+        <span>
+          ৳${itemTotal.toFixed(2)}
+          <button class="btn btn-sm btn-outline-danger remove-btn ms-3" data-index="${index}">❌</button>
+        </span>
+      `;
+
+      cartItems.appendChild(li);
+    });
+
+    // Total price item
+    const totalLi = document.createElement("li");
+    totalLi.className = "list-group-item d-flex justify-content-between align-items-center fw-bold bg-light";
+    totalLi.innerHTML = `<span>Total Price:</span> <span>৳${totalPrice.toFixed(2)}</span>`;
+    cartItems.appendChild(totalLi);
+
+    // Remove item functionality
+    document.querySelectorAll(".remove-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const index = parseInt(button.getAttribute("data-index"));
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      });
+    });
+  }
+
+  function generateReceipt(items) {
+    const date = new Date().toLocaleString();
+    let subtotal = 0;
+    let receiptItems = items.map(item => {
+      const price = parseFloat(item.price);
+      const quantity = item.quantity || 1;
+      const itemTotal = price * quantity;
+      subtotal += itemTotal;
+      return `<li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${item.name} <span class="text-muted small">x${quantity}</span></span>
+        <span>৳${itemTotal.toFixed(2)}</span>
+      </li>`;
+    }).join("");
+
+    const vat = subtotal * 0.05;
+    const grandTotal = subtotal + vat;
+
+    let receiptHTML = `
+      <div class="card shadow receipt-fade-in">
+        <div class="card-header bg-primary text-white text-center">
+          <h4>🧾 Receipt</h4>
+        </div>
+        <div class="card-body">
+          <p><strong>Date:</strong> ${date}</p>
+          <ul class="list-group mb-3">
+            ${receiptItems}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Subtotal</span>
+              <span>৳${subtotal.toFixed(2)}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>VAT (5%)</span>
+              <span>৳${vat.toFixed(2)}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center fw-bold bg-light">
+              <span>Grand Total</span>
+              <span>৳${grandTotal.toFixed(2)}</span>
+            </li>
+          </ul>
+          <p class="text-success fw-bold text-center">Thank you for your purchase!</p>
+          <a id="downloadReceipt" href="#" class="btn btn-outline-primary mt-2 receipt-download-hover" download="receipt.txt">⬇ Download Receipt</a>
+        </div>
+      </div>
+    `;
+    return { html: receiptHTML, text: generateReceiptText(items, subtotal, vat, grandTotal, date) };
+  }
+
+  function generateReceiptText(items, subtotal, vat, grandTotal, date) {
+    let lines = [
+      "Receipt",
+      `Date: ${date}`,
+      "Items:"
+    ];
+    items.forEach(item => {
+      const price = parseFloat(item.price);
+      const quantity = item.quantity || 1;
+      const itemTotal = price * quantity;
+      lines.push(`- ${item.name} x${quantity}: ৳${itemTotal.toFixed(2)}`);
+    });
+    lines.push(
+      `Subtotal: ৳${subtotal.toFixed(2)}`,
+      `VAT (5%): ৳${vat.toFixed(2)}`,
+      `Grand Total: ৳${grandTotal.toFixed(2)}`,
+      "Thank you for your purchase!"
+    );
+    return lines.join("\n");
+  }
+
+  orderNow.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("🚫 Your cart is empty!");
+      return;
+    }
+
+    alert("🎉 Thank you for your order!");
+
+    // Show receipt
+    const { html, text } = generateReceipt(cart);
+    receiptSection.innerHTML = html;
+
+    // Download receipt as text
+    const blob = new Blob([text], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    document.getElementById("downloadReceipt").href = url;
+
+    localStorage.removeItem("cart");
+    cart = [];
+    renderCart();
+  });
+
+  renderCart();
+});
