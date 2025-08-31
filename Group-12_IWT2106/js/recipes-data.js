@@ -632,7 +632,7 @@ const recipes = [
     ingredients: [
       "Shrimps & vegetables (carrot, zucchini, eggplant)",
       "1 cup all-purpose flour",
-      "1 egg",
+      "2 egg",
       "Cold water",
       "Oil for deep frying"
     ],
