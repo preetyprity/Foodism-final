@@ -35,16 +35,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
     <h4>📝 Ingredients:</h4>
     <ul class="list-group mb-4">
-      ${recipe.ingredients.map(item => <li class="list-group-item">${item}</li>).join("")}
+      ${recipe.ingredients.map(item => `<li class="list-group-item">${item}</li>`).join("")}
     </ul>
 
     <h4>👨‍🍳 Steps:</h4>
     <ol class="list-group list-group-numbered mb-4">
-      ${recipe.steps.map(step => <li class="list-group-item">${step}</li>).join("")}
+      ${recipe.steps.map(step => `<li class="list-group-item">${step}</li>`).join("")}
     </ol>
    <div class="footer-container">
   <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
 </div>
 
-  `;
+  `;
 });
