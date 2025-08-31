@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Korean Food | Delicious Food</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Food</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active d-flex align-items-center">
+              <i class="fas fa-home me-2"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="recipes.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-utensils me-2"></i> Menu
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-info-circle me-2"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-envelope me-2"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="cartLink" class="nav-link" href="cart.html">
+              🛒 Cart
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section
+    class="hero d-flex align-items-center justify-content-center"
+    style="height:40vh; background:url('images/korean.jpg') no-repeat center/cover; margin-top:56px;"
+  >
+    <div class="text-center text-white bg-dark bg-opacity-50 p-3 rounded">
+      <h1 class="fw-bold">Korean Food</h1>
+      <p class="lead">Spicy, flavorful & full of tradition</p>
+    </div>
+  </section>
+
+  <!-- Recipes -->
+  <section class="container py-5">
+    <h2 class="fw-bold mb-4 text-center">🥘 Popular Korean Dishes</h2>
+    <div class="row g-4">
+
+      <!-- Kimchi -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/kimchi.jpg" class="card-img-top" alt="Kimchi" />
+          <div class="card-body">
+            <h5 class="card-title">Kimchi</h5>
+            <p class="card-text">Fermented cabbage with chili, garlic, and ginger.</p>
+            <p class="price fw-bold text-success">Price: ৳150</p>
+            <a href="recipe-detail.html?id=kimchi" class="btn btn-custom">View Recipe</a>
+            <button
+              class="btn btn-outline-success btn-sm add-to-cart"
+              data-name="Kimchi"
+              data-price="150"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bibimbap -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/bibimbap.jpg" class="card-img-top" alt="Bibimbap" />
+          <div class="card-body">
+            <h5 class="card-title">Bibimbap</h5>
+            <p class="card-text">Rice bowl topped with vegetables, meat, and fried egg.</p>
+            <p class="price fw-bold text-success">Price: ৳400</p>
+            <a href="recipe-detail.html?id=bibimbap" class="btn btn-custom">View Recipe</a>
+            <button
+              class="btn btn-outline-success btn-sm add-to-cart"
+              data-name="Bibimbap"
+              data-price="400"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bulgogi -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/bulgogi.jpg" class="card-img-top" alt="Bulgogi" />
+          <div class="card-body">
+            <h5 class="card-title">Bulgogi</h5>
+            <p class="card-text">Marinated beef slices grilled with garlic and sesame oil.</p>
+            <p class="price fw-bold text-success">Price: ৳500</p>
+            <a href="recipe-detail.html?id=bulgogi" class="btn btn-custom">View Recipe</a>
+            <button
+              class="btn btn-outline-success btn-sm add-to-cart"
+              data-name="Bulgogi"
+              data-price="500"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tteokbokki -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/tteokbokki.jpg" class="card-img-top" alt="Tteokbokki" />
+          <div class="card-body">
+            <h5 class="card-title">Tteokbokki</h5>
+            <p class="card-text">Spicy rice cakes stir-fried with chili sauce.</p>
+            <p class="price fw-bold text-success">Price: ৳250</p>
+            <a href="recipe-detail.html?id=tteokbokki" class="btn btn-custom">View Recipe</a>
+            <button
+              class="btn btn-outline-success btn-sm add-to-cart"
+              data-name="Tteokbokki"
+              data-price="250"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korean BBQ -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/korean-bbq.jpg" class="card-img-top" alt="Korean BBQ" />
+          <div class="card-body">
+            <h5 class="card-title">Korean BBQ</h5>
+            <p class="card-text">Grilled beef, pork, or chicken served with side dishes.</p>
+            <p class="price fw-bold text-success">Price: ৳600</p>
+            <a href="recipe-detail.html?id=korean-bbq" class="btn btn-custom">View Recipe</a>
+            <button
+              class="btn btn-outline-success btn-sm add-to-cart"
+              data-name="Korean BBQ"
+              data-price="600"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Japchae -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/japchae.jpg" class="card-img-top" alt="Japchae" />
+          <div class="card-body">
+            <h5 class="card-title">Japchae</h5>
+            <p class="card-text">Stir-fried glass noodles with vegetables and soy sauce.</p>
+            <p class="price fw-bold text-success">Price: ৳300</p>
+            <a href="recipe-detail.html?id=japchae" class="btn btn-custom">View Recipe</a>
+            <button
+              class="btn btn-outline-success btn-sm add-to-cart"
+              data-name="Japchae"
+              data-price="300"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+<!-- Go Back Button - Centered -->
+<div class="footer-container">
+  <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
+</div>
+
+  <!-- Footer -->
+  
+<footer>
+  <!-- সোশ্যাল আইকন -->
+  <div class="social-icons">
+    <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+    <a href="#" class="fab fa-twitter" title="Twitter"></a>
+    <a href="#" class="fab fa-instagram" title="Instagram"></a>
+    <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
+  </div>
+  <!-- অন্যান্য লিঙ্ক -->
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">About Us</a>
+  </div>
+  <p>&copy; 2025 Delicious Food | All Rights Reserved</p>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
