@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         stars[i].classList.add("active");
       }
 
-      ratingValue.textContent = You rated this ${value} out of 5 stars ⭐;
+      ratingValue.textContent = `You rated this ${value} out of 5 stars ⭐`;
     });
   });
 
@@ -32,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
       li.textContent = commentText;
       commentList.appendChild(li);
       commentInput.value = "";
-    }
-  });
+    }
+  });
 });
