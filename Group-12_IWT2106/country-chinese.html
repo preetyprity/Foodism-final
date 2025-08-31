@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese Recipes | Delicious Recipes</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Recipes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active d-flex align-items-center">
+              <i class="fas fa-home me-2"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="recipes.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-utensils me-2"></i> Menu
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-info-circle me-2"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-envelope me-2"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="cartLink" class="nav-link" href="cart.html">🛒 Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero -->
+<section class="hero d-flex align-items-center justify-content-center" style="height:40vh; background:url('images/chinese.jpg') no-repeat center/cover; margin-top:56px;">
+  <div class="text-center text-white bg-dark bg-opacity-50 p-3 rounded">
+    <h1 class="fw-bold">Mexican Recipes</h1>
+    <p class="lead">Spicy, colorful & full of flavors</p>
+  </div>
+</section>
+
+  <!-- Main Section -->
+  <section class="container py-5" style="margin-top: 80px;">
+    <h2 class="text-center mb-5 fw-bold">🍜 Chinese Recipes</h2>
+    <div class="row g-4">
+
+      <!-- Chow Mein -->
+      <div class="col-md-4">
+        <div class="card recipe-card h-100 shadow-sm">
+          <img src="images/chow-mein.jpg" class="card-img-top" alt="Chow Mein">
+          <div class="card-body">
+            <h5 class="card-title">Chow Mein</h5>
+            <p class="card-text">Stir-fried noodles with vegetables, soy sauce, and chicken.</p>
+            <p class="price fw-bold text-success">Price: ৳420</p>
+            <a href="recipe-detail.html?id=chow-mein" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Chow Mein" data-price="420">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sweet & Sour Chicken -->
+      <div class="col-md-4">
+        <div class="card recipe-card h-100 shadow-sm">
+          <img src="images/sweet-sour-chicken.jpg" class="card-img-top" alt="Sweet and Sour Chicken">
+          <div class="card-body">
+            <h5 class="card-title">Sweet & Sour Chicken</h5>
+            <p class="card-text">Crispy chicken chunks tossed in tangy sweet & sour sauce.</p>
+            <p class="price fw-bold text-success">Price: ৳480</p>
+            <a href="recipe-detail.html?id=sweet-sour-chicken" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Sweet & Sour Chicken" data-price="480">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kung Pao Chicken -->
+      <div class="col-md-4">
+        <div class="card recipe-card h-100 shadow-sm">
+          <img src="images/kung-pao.jpg" class="card-img-top" alt="Kung Pao Chicken">
+          <div class="card-body">
+            <h5 class="card-title">Kung Pao Chicken</h5>
+            <p class="card-text">Spicy stir-fried chicken with peanuts and chili peppers.</p>
+            <p class="price fw-bold text-success">Price: ৳530</p>
+            <a href="recipe-detail.html?id=kung-pao" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Kung Pao Chicken" data-price="530">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spring Rolls -->
+      <div class="col-md-4">
+        <div class="card recipe-card h-100 shadow-sm">
+          <img src="images/spring-rolls.jpg" class="card-img-top" alt="Spring Rolls">
+          <div class="card-body">
+            <h5 class="card-title">Spring Rolls</h5>
+            <p class="card-text">Crispy fried rolls filled with vegetables and meat.</p>
+            <p class="price fw-bold text-success">Price: ৳350</p>
+            <a href="recipe-detail.html?id=spring-rolls" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Spring Rolls" data-price="350">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fried Rice -->
+      <div class="col-md-4">
+        <div class="card recipe-card h-100 shadow-sm">
+          <img src="images/fried-rice.jpg" class="card-img-top" alt="Fried Rice">
+          <div class="card-body">
+            <h5 class="card-title">Fried Rice</h5>
+            <p class="card-text">Classic fried rice with soy sauce, egg, and veggies.</p>
+            <p class="price fw-bold text-success">Price: ৳390</p>
+            <a href="recipe-detail.html?id=fried-rice" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Fried Rice" data-price="390">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dumplings -->
+      <div class="col-md-4">
+        <div class="card recipe-card h-100 shadow-sm">
+          <img src="images/dumplings.jpg" class="card-img-top" alt="Dumplings">
+          <div class="card-body">
+            <h5 class="card-title">Dumplings</h5>
+            <p class="card-text">Steamed or fried dumplings filled with minced meat and vegetables.</p>
+            <p class="price fw-bold text-success">Price: ৳470</p>
+            <a href="recipe-detail.html?id=dumplings" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Dumplings" data-price="470">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-light">
+    <p>© 2025 Delicious Recipes | Made with ❤</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
