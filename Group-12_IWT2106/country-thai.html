@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thai Recipes | Delicious Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Recipes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active d-flex align-items-center">
+              <i class="fas fa-home me-2"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="recipes.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-utensils me-2"></i> Menu
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-info-circle me-2"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-envelope me-2"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="cartLink" class="nav-link" href="cart.html">🛒 Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center justify-content-center" style="height:40vh; background:url('images/thai.jpg') no-repeat center/cover; margin-top:56px;">
+    <div class="text-center text-white bg-dark bg-opacity-50 p-3 rounded">
+      <h1 class="fw-bold">Thai Recipes</h1>
+      <p class="lead">Exotic flavors with spices, herbs & coconut milk</p>
+    </div>
+  </section>
+
+  <!-- Recipes -->
+  <section class="container py-5">
+    <h2 class="fw-bold mb-4 text-center">🍜 Popular Thai Dishes</h2>
+    <div class="row g-4">
+
+      <!-- Pad Thai -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/pad-thai.jpg" class="card-img-top" alt="Pad Thai" />
+          <div class="card-body">
+            <h5 class="card-title">Pad Thai</h5>
+            <p class="card-text">Stir-fried rice noodles with shrimp, tofu, peanuts, and lime.</p>
+            <p class="price fw-bold text-success">Price: ৳850</p>
+            <a href="recipe-detail.html?id=pad-thai" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Pad Thai" data-price="850">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tom Yum -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/tom-yum.jpg" class="card-img-top" alt="Tom Yum Soup" />
+          <div class="card-body">
+            <h5 class="card-title">Tom Yum Soup</h5>
+            <p class="card-text">Spicy and sour soup with lemongrass, shrimp, and mushrooms.</p>
+            <p class="price fw-bold text-success">Price: ৳920</p>
+            <a href="recipe-detail.html?id=tom-yum" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Tom Yum Soup" data-price="920">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Green Curry -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/green-curry.jpg" class="card-img-top" alt="Green Curry" />
+          <div class="card-body">
+            <h5 class="card-title">Green Curry</h5>
+            <p class="card-text">Rich coconut milk curry with green chili paste and vegetables.</p>
+            <p class="price fw-bold text-success">Price: ৳1100</p>
+            <a href="recipe-detail.html?id=green-curry" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Green Curry" data-price="1100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Red Curry -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/red-curry.jpg" class="card-img-top" alt="Red Curry" />
+          <div class="card-body">
+            <h5 class="card-title">Red Curry</h5>
+            <p class="card-text">Spicy Thai red curry with chicken, coconut milk, and bamboo shoots.</p>
+            <p class="price fw-bold text-success">Price: ৳1050</p>
+            <a href="recipe-detail.html?id=red-curry" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Red Curry" data-price="1050">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mango Sticky Rice -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/mango-sticky-rice.jpg" class="card-img-top" alt="Mango Sticky Rice" />
+          <div class="card-body">
+            <h5 class="card-title">Mango Sticky Rice</h5>
+            <p class="card-text">Sweet sticky rice with coconut milk and ripe mango slices.</p>
+            <p class="price fw-bold text-success">Price: ৳780</p>
+            <a href="recipe-detail.html?id=mango-sticky-rice" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Mango Sticky Rice" data-price="780">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thai Fried Rice -->
+      <div class="col-md-4">
+        <div class="card recipe-card shadow-sm h-100">
+          <img src="images/thai-fried-rice.jpg" class="card-img-top" alt="Thai Fried Rice" />
+          <div class="card-body">
+            <h5 class="card-title">Thai Fried Rice</h5>
+            <p class="card-text">Flavorful fried rice with fish sauce, egg, and vegetables.</p>
+            <p class="price fw-bold text-success">Price: ৳700</p>
+            <a href="recipe-detail.html?id=thai-fried-rice" class="btn btn-custom">View Recipe</a>
+            <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Thai Fried Rice" data-price="700">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p class="mb-0">&copy; 2025 Delicious Recipes | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

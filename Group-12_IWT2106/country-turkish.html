@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Turkish Recipes | Delicious Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Recipes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active d-flex align-items-center">
+            <i class="fas fa-home me-2"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="recipes.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-utensils me-2"></i> Menu
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-info-circle me-2"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-envelope me-2"></i> Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a id="cartLink" class="nav-link" href="cart.html">🛒 Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<section class="banner">
+  <img src="images/turkish.jpg" alt="Turkish Food Banner" class="banner-img">
+  <div class="banner-text">
+    <h2>Turkish Recipes</h2>
+    <p>Rich flavors of the Mediterranean and Middle East</p>
+  </div>
+</section>
+
+<!-- Turkish Recipes -->
+<section class="container py-5 mt-5">
+  <h2 class="fw-bold text-center mb-4">🥙 Turkish Recipes</h2>
+  <div class="row g-4">
+
+    <!-- Recipe Card Example -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/kebab.jpg" class="card-img-top" alt="Kebab" />
+        <div class="card-body">
+          <h5 class="card-title">Kebab</h5>
+          <p class="card-text">Juicy grilled meat skewers with spices and herbs.</p>
+          <p class="price fw-bold text-success">Price: ৳230</p>
+          <a href="recipe-detail.html?id=kebab" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Kebab" data-price="230">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/baklava.jpg" class="card-img-top" alt="Baklava" />
+        <div class="card-body">
+          <h5 class="card-title">Baklava</h5>
+          <p class="card-text">Sweet dessert pastry with layers of filo, honey, and nuts.</p>
+          <p class="price fw-bold text-success">Price: ৳150</p>
+          <a href="recipe-detail.html?id=baklava" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Baklava" data-price="150">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/turkish-delight.jpg" class="card-img-top" alt="Turkish Delight" />
+        <div class="card-body">
+          <h5 class="card-title">Turkish Delight</h5>
+          <p class="card-text">Soft, chewy candy flavored with rosewater and nuts.</p>
+          <p class="price fw-bold text-success">Price: ৳90</p>
+          <a href="recipe-detail.html?id=turkish-delight" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Turkish Delight" data-price="90">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/lahmacun.jpg" class="card-img-top" alt="Lahmacun" />
+        <div class="card-body">
+          <h5 class="card-title">Lahmacun</h5>
+          <p class="card-text">Thin flatbread topped with minced meat, veggies, and spices.</p>
+          <p class="price fw-bold text-success">Price: ৳120</p>
+          <a href="recipe-detail.html?id=lahmacun" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Lahmacun" data-price="120">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/pide.jpg" class="card-img-top" alt="Pide" />
+        <div class="card-body">
+          <h5 class="card-title">Pide</h5>
+          <p class="card-text">Turkish-style pizza baked with cheese and toppings.</p>
+          <p class="price fw-bold text-success">Price: ৳200</p>
+          <a href="recipe-detail.html?id=pide" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Pide" data-price="200">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/doner.jpg" class="card-img-top" alt="Doner Kebab" />
+        <div class="card-body">
+          <h5 class="card-title">Doner Kebab</h5>
+          <p class="card-text">Sliced meat served in pita bread with salad and sauce.</p>
+          <p class="price fw-bold text-success">Price: ৳270</p>
+          <a href="recipe-detail.html?id=doner-kebab" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Doner Kebab" data-price="270">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-light">
+  <p>© 2025 Delicious Recipes | Made with ❤</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
