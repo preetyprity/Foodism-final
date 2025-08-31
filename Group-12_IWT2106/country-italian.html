@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italian Food | Delicious Food</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Food</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active d-flex align-items-center">
+            <i class="fas fa-home me-2"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="recipes.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-utensils me-2"></i> Menu
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-info-circle me-2"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-envelope me-2"></i> Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a id="cartLink" class="nav-link" href="cart.html">🛒 Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<section class="banner">
+  <img src="images/italian-banner.jpg" alt="Italian Food Banner" class="banner-img">
+  <div class="banner-text">
+    <h2>Italian Food</h2>
+    <p>Authentic, cheesy & delicious Italian dishes</p>
+  </div>
+</section>
+
+<!-- Italian Recipes Section -->
+<section class="container py-5 mt-5">
+  <h2 class="text-center mb-5 fw-bold">🍕 Italian Food</h2>
+  <div class="row g-4">
+
+    <!-- Pizza Margherita -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm recipe-card">
+        <img src="images/pizza.jpg" class="card-img-top" alt="Classic Pizza Margherita with mozzarella and basil">
+        <div class="card-body">
+          <h5 class="card-title">Pizza Margherita</h5>
+          <p class="card-text">Classic Italian pizza with tomato, mozzarella, and basil.</p>
+          <p class="price fw-bold text-success">Price: ৳480</p>
+          <a href="recipe-detail.html?id=pizza" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Pizza Margherita" data-price="480">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pasta Carbonara -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm recipe-card">
+        <img src="images/pasta.jpg" class="card-img-top" alt="Pasta Carbonara with pancetta and parmesan">
+        <div class="card-body">
+          <h5 class="card-title">Pasta Carbonara</h5>
+          <p class="card-text">Creamy pasta with pancetta, eggs, and parmesan cheese.</p>
+          <p class="price fw-bold text-success">Price: ৳450</p>
+          <a href="recipe-detail.html?id=pasta" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Pasta Carbonara" data-price="450">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lasagna -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm recipe-card">
+        <img src="images/lasagna.jpg" class="card-img-top" alt="Cheesy Italian Lasagna with béchamel sauce">
+        <div class="card-body">
+          <h5 class="card-title">Lasagna</h5>
+          <p class="card-text">Layered pasta with meat sauce, béchamel, and cheese.</p>
+          <p class="price fw-bold text-success">Price: ৳500</p>
+          <a href="recipe-detail.html?id=lasagna" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Lasagna" data-price="500">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risotto -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm recipe-card">
+        <img src="images/risotto.jpg" class="card-img-top" alt="Creamy Italian Risotto with parmesan">
+        <div class="card-body">
+          <h5 class="card-title">Risotto</h5>
+          <p class="card-text">Creamy rice dish cooked slowly with broth and parmesan.</p>
+          <p class="price fw-bold text-success">Price: ৳420</p>
+          <a href="recipe-detail.html?id=risotto" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Risotto" data-price="420">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tiramisu -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm recipe-card">
+        <img src="images/tiramisu.jpg" class="card-img-top" alt="Classic Italian Tiramisu with cocoa and mascarpone">
+        <div class="card-body">
+          <h5 class="card-title">Tiramisu</h5>
+          <p class="card-text">Coffee-flavored dessert with mascarpone and cocoa.</p>
+          <p class="price fw-bold text-success">Price: ৳350</p>
+          <a href="recipe-detail.html?id=tiramisu" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Tiramisu" data-price="350">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bruschetta -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm recipe-card">
+        <img src="images/bruschetta.jpg" class="card-img-top" alt="Bruschetta with tomatoes, garlic, and olive oil">
+        <div class="card-body">
+          <h5 class="card-title">Bruschetta</h5>
+          <p class="card-text">Toasted bread topped with tomatoes, garlic, and olive oil.</p>
+          <p class="price fw-bold text-success">Price: ৳280</p>
+          <a href="recipe-detail.html?id=bruschetta" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Bruschetta" data-price="280">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Go Back Button - Centered -->
+<div class="footer-container">
+  <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <!-- সোশ্যাল আইকন -->
+  <div class="social-icons">
+    <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+    <a href="#" class="fab fa-twitter" title="Twitter"></a>
+    <a href="#" class="fab fa-instagram" title="Instagram"></a>
+    <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
+  </div>
+  <!-- অন্যান্য লিঙ্ক -->
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">About Us</a>
+  </div>
+  <p>&copy; 2025 Delicious Food | All Rights Reserved</p>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
