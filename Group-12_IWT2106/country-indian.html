@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Food | Delicious Food</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Food</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active d-flex align-items-center">
+              <i class="fas fa-home me-2"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="recipes.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-utensils me-2"></i> Menu
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-info-circle me-2"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link d-flex align-items-center">
+              <i class="fas fa-envelope me-2"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="cartLink" class="nav-link" href="cart.html">🛒 Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Banner -->
+<section class="banner">
+  <img src="images/indian-banner.jpg" alt="Indian Food Banner" class="banner-img">
+  <div class="banner-text">
+    <h2>Indian Food</h2>
+    <p>Spicy, flavorful & diverse Indian dishes</p>
+  </div>
+</section>
+
+<!-- Recipes Section -->
+<section class="container py-5 mt-5">
+  <h2 class="fw-bold text-center mb-4">🥘 Popular Indian Dishes</h2>
+  <div class="row g-4">
+
+    <!-- Butter Chicken -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/butter-chicken.jpg" class="card-img-top" alt="Delicious creamy Butter Chicken curry" />
+        <div class="card-body">
+          <h5 class="card-title">Butter Chicken</h5>
+          <p class="card-text">Creamy tomato-based chicken curry loved worldwide.</p>
+          <p class="price fw-bold text-success">Price: ৳520</p>
+          <a href="recipe-detail.html?id=butter-chicken" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Butter Chicken" data-price="520">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paneer Tikka -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/paneer-tikka.jpg" class="card-img-top" alt="Grilled spicy Paneer Tikka skewers" />
+        <div class="card-body">
+          <h5 class="card-title">Paneer Tikka</h5>
+          <p class="card-text">Spiced cottage cheese cubes grilled to perfection.</p>
+          <p class="price fw-bold text-success">Price: ৳460</p>
+          <a href="recipe-detail.html?id=paneer-tikka" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Paneer Tikka" data-price="460">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hyderabadi Biryani -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/biryani.jpg" class="card-img-top" alt="Flavorful Hyderabadi Biryani with saffron rice" />
+        <div class="card-body">
+          <h5 class="card-title">Hyderabadi Biryani</h5>
+          <p class="card-text">Aromatic rice cooked with spices, saffron, and chicken/mutton.</p>
+          <p class="price fw-bold text-success">Price: ৳550</p>
+          <a href="recipe-detail.html?id=biryani" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Hyderabadi Biryani" data-price="550">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masala Dosa -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/masala-dosa.jpg" class="card-img-top" alt="Crispy Masala Dosa stuffed with potatoes" />
+        <div class="card-body">
+          <h5 class="card-title">Masala Dosa</h5>
+          <p class="card-text">Crispy rice crepe stuffed with spiced potato filling.</p>
+          <p class="price fw-bold text-success">Price: ৳300</p>
+          <a href="recipe-detail.html?id=masala-dosa" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Masala Dosa" data-price="300">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gulab Jamun -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/gulab-jamun.jpg" class="card-img-top" alt="Soft Gulab Jamun soaked in sugar syrup" />
+        <div class="card-body">
+          <h5 class="card-title">Gulab Jamun</h5>
+          <p class="card-text">Sweet fried dough balls soaked in rose-flavored sugar syrup.</p>
+          <p class="price fw-bold text-success">Price: ৳220</p>
+          <a href="recipe-detail.html?id=gulab-jamun" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Gulab Jamun" data-price="220">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Go Back Button - Centered -->
+<div class="footer-container">
+  <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
+</div>
+
+
+
+<!-- Footer -->
+<footer>
+  <!-- সোশ্যাল আইকন -->
+  <div class="social-icons">
+    <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+    <a href="#" class="fab fa-twitter" title="Twitter"></a>
+    <a href="#" class="fab fa-instagram" title="Instagram"></a>
+    <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
+  </div>
+  <!-- অন্যান্য লিঙ্ক -->
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">About Us</a>
+  </div>
+  <p>&copy; 2025 Delicious Food | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
