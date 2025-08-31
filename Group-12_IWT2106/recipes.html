@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes | Delicious Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Food</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item">
+  <a href="index.html" class="nav-link active d-flex align-items-center">
+    <i class="fas fa-home me-2"></i> Home
+  </a>
+</li>
+<li class="nav-item">
+  <a href="recipes.html" class="nav-link d-flex align-items-center">
+    <i class="fas fa-utensils me-2"></i> Menu
+  </a>
+</li>
+<li class="nav-item">
+  <a href="about.html" class="nav-link d-flex align-items-center">
+    <i class="fas fa-info-circle me-2"></i> About
+  </a>
+</li>
+<li class="nav-item">
+  <a href="contact.html" class="nav-link d-flex align-items-center">
+    <i class="fas fa-envelope me-2"></i> Contact
+  </a>
+</li>
+
+<li class="nav-item">
+  <a id="cartLink" class="nav-link" href="cart.html">
+    🛒 Cart
+  </a>
+</li> 
+</a>
+  </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Recipes -->
+  <section class="container py-5 mt-5">
+    <h2 class="fw-bold text-center mb-4">Explore Recipes by Country</h2>
+
+    <!-- Search -->
+    <div class="text-center mb-4">
+      <input type="text" id="recipeSearch" class="form-control w-50 mx-auto" placeholder="🔍 Search recipes...">
+    </div>
+
+    <div class="row g-4">
+      <!-- Bengali -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/bengali.jpg" class="card-img-top" alt="Bengali Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bengali </h5>
+            <a href="country-bengali.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indian -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/indian.jpg" class="card-img-top" alt="Indian Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Indian</h5>
+            <a href="country-indian.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Italian -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/italian.jpg" class="card-img-top" alt="Italian Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Italian</h5>
+            <a href="country-italian.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thai -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/thai.jpg" class="card-img-top" alt="Thai Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Thai</h5>
+            <a href="country-thai.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Korean -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/korean.jpg" class="card-img-top" alt="Korean Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Korean</h5>
+            <a href="country-korean.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Turkish -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/turkish.jpg" class="card-img-top" alt="Turkish Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Turkish</h5>
+            <a href="country-turkish.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chinese -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/chinese.jpg" class="card-img-top" alt="Chinese Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chinese</h5>
+            <a href="country-chinese.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mexican -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/mexican.jpg" class="card-img-top" alt="Mexican Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mexican</h5>
+            <a href="country-mexican.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Japanese -->
+      <div class="col-md-4">
+        <div class="card shadow-sm recipe-card">
+          <img src="images/japanese.jpg" class="card-img-top" alt="Japanese Food">
+          <div class="card-body text-center">
+            <h5 class="card-title">Japanese</h5>
+            <a href="country-japanese.html" class="btn btn-custom">View Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Go Back Button - Centered -->
+<div class="footer-container">
+  <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <!-- সোশ্যাল আইকন -->
+  <div class="social-icons">
+    <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+    <a href="#" class="fab fa-twitter" title="Twitter"></a>
+    <a href="#" class="fab fa-instagram" title="Instagram"></a>
+    <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
+  </div>
+  <!-- অন্যান্য লিঙ্ক -->
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">About Us</a>
+  </div>
+  <p>&copy; 2025 Delicious Food | All Rights Reserved</p>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
