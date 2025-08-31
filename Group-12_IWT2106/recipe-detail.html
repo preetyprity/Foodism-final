@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Details | Delicious Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Food</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item">
+  <a href="index.html" class="nav-link active d-flex align-items-center">
+    <i class="fas fa-home me-2"></i> Home
+  </a>
+</li>
+<li class="nav-item">
+  <a href="recipes.html" class="nav-link d-flex align-items-center">
+    <i class="fas fa-utensils me-2"></i> Recipes
+  </a>
+</li>
+<li class="nav-item">
+  <a href="about.html" class="nav-link d-flex align-items-center">
+    <i class="fas fa-info-circle me-2"></i> About
+  </a>
+</li>
+<li class="nav-item">
+  <a href="contact.html" class="nav-link d-flex align-items-center">
+    <i class="fas fa-envelope me-2"></i> Contact
+  </a>
+</li>
+
+<li class="nav-item">
+  <a id="cartLink" class="nav-link" href="cart.html">
+    🛒 Cart
+  </a>
+</li>
+</a>
+  </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Recipe Detail Section -->
+  <section class="container py-5 mt-5">
+    <div id="recipeDetails" class="text-center">
+      <!-- Recipe details will load here -->
+    </div>
+
+    <!-- ⭐ Rating System -->
+    <div class="mt-5">
+      <h4>Rate this Recipe:</h4>
+      <div id="rating" class="mb-3">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+      <p id="rating-value" class="fw-bold text-success"></p>
+    </div>
+
+    <!-- 💬 Comment System -->
+    <div class="mt-5">
+      <h4>Leave a Comment:</h4>
+      <form id="comment-form" class="mb-3">
+        <textarea id="comment-input" class="form-control mb-2" placeholder="Write your comment..." required></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <ul id="comment-list" class="list-unstyled"></ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-light">
+    <p>© 2025 Delicious Recipes | Made with ❤</p>
+  </footer>
+
+  <!-- Bootstrap + Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/recipes-data.js"></script>
+  <script src="js/recipe-detail-loader.js"></script>
+  <script src="js/rating-comments.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

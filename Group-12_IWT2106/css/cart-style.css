@@ -1,0 +1,148 @@
+body {
+  background-color: #fffaf0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.remove-btn {
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+#orderNow {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+#orderNow:hover {
+  transform: scale(1.05);
+}
+
+#receiptSection .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#receiptSection .card-header {
+  text-align: center;
+}
+
+#receiptSection ul.list-group {
+  margin-bottom: 0;
+}
+
+.cart-item-hover {
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.cart-item-hover:hover {
+  background: #f0f8ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.receipt-fade-in {
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.receipt-download-hover {
+  transition: background 0.2s, color 0.2s;
+}
+.receipt-download-hover:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.btn-secondary {
+  display: inline-block; /* Inline block for centering */
+  background-color: #f77f00; /* Orange color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  margin: 20px auto; /* Center the button horizontally */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.btn-secondary:hover {
+  background-color: #e76f00; /* Darker orange on hover */
+}
+
+
+/* Footer container to center the button */
+.footer-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin-top: 20px;
+}
+
+footer {
+    background: linear-gradient(135deg, #0d1b2a, #ff7043); /* সুন্দর গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ড */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffb703; /* সোশ্যাল আইকনের হোভার ইফেক্ট */
+}
+
+footer .footer-links {
+    margin-top: 20px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ffb703; /* হোভার ইফেক্ট */
+}
+
+footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #ccc;
+}

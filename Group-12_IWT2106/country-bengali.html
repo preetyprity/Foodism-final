@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bengali Food | Delicious Food</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🍴 Delicious Food</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active d-flex align-items-center">
+            <i class="fas fa-home me-2"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="recipes.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-utensils me-2"></i> Menu
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-info-circle me-2"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link d-flex align-items-center">
+            <i class="fas fa-envelope me-2"></i> Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a id="cartLink" class="nav-link" href="cart.html">🛒 Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<section class="banner">
+  <img src="images/bengali-banner.jpg" alt="Bengali Food Banner" class="banner-img">
+  <div class="banner-text">
+    <h2>Bengali Food</h2>
+    <p>Traditional, flavorful & rich Bengali dishes</p>
+  </div>
+</section>
+
+<!-- Bengali Recipes -->
+<section class="container py-5 mt-5">
+  <h2 class="fw-bold text-center mb-4">🍛  Popular Bengali Dishes</h2>
+  <div class="row g-4">
+
+    <!-- Recipe Card Example -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/fish-curry.jpg" class="card-img-top" alt="Fish Curry" />
+        <div class="card-body">
+          <h5 class="card-title">Bengali Fish Curry</h5>
+          <p class="card-text">A traditional spicy fish curry made with mustard paste & fresh spices.</p>
+          <p class="price fw-bold text-success">Price: ৳899</p>
+          <a href="recipe-detail.html?id=fish-curry" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Bengali Fish Curry" data-price="899">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat similar blocks for each recipe -->
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/mishti-doi.jpg" class="card-img-top" alt="Mishti Doi" />
+        <div class="card-body">
+          <h5 class="card-title">Mishti Doi</h5>
+          <p class="card-text">Famous Bengali sweet yogurt, rich and creamy in taste.</p>
+          <p class="price fw-bold text-success">Price: ৳450</p>
+          <a href="recipe-detail.html?id=mishti-doi" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Mishti Doi" data-price="450">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/luchi-alurdom.jpg" class="card-img-top" alt="Luchi Alur Dom" />
+        <div class="card-body">
+          <h5 class="card-title">Luchi & Alur Dom</h5>
+          <p class="card-text">Classic Bengali breakfast made of fried bread & spicy potato curry.</p>
+          <p class="price fw-bold text-success">Price: ৳600</p>
+          <a href="recipe-detail.html?id=luchi-alurdom" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Luchi & Alur Dom" data-price="600">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add remaining recipes the same way -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/dim-curry.jpg" class="card-img-top" alt="Dim Curry" />
+        <div class="card-body">
+          <h5 class="card-title">Dim Curry</h5>
+          <p class="card-text">Spicy Bengali egg curry cooked with potatoes.</p>
+          <p class="price fw-bold text-success">Price: ৳575</p>
+          <a href="recipe-detail.html?id=dim-curry" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Dim Curry" data-price="575">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/mutton-curry.jpg" class="card-img-top" alt="Mutton Curry" />
+        <div class="card-body">
+          <h5 class="card-title">Mutton Curry</h5>
+          <p class="card-text">Rich and spicy Bengali mutton curry cooked with potatoes.</p>
+          <p class="price fw-bold text-success">Price: ৳1099</p>
+          <a href="recipe-detail.html?id=mutton-curry" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Mutton Curry" data-price="1099">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/khichuri.jpg" class="card-img-top" alt="Khichuri" />
+        <div class="card-body">
+          <h5 class="card-title">Khichuri</h5>
+          <p class="card-text">Traditional Bengali comfort food made with rice, lentils, and spices.</p>
+          <p class="price fw-bold text-success">Price: ৳725</p>
+          <a href="recipe-detail.html?id=khichuri" class="btn btn-custom">View Recipe</a>
+          <button class="btn btn-outline-success btn-sm add-to-cart" data-name="Khichuri" data-price="725">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Go Back Button - Centered -->
+<div class="footer-container">
+  <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <!-- সোশ্যাল আইকন -->
+  <div class="social-icons">
+    <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+    <a href="#" class="fab fa-twitter" title="Twitter"></a>
+    <a href="#" class="fab fa-instagram" title="Instagram"></a>
+    <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
+  </div>
+  <!-- অন্যান্য লিঙ্ক -->
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">About Us</a>
+  </div>
+  <p>&copy; 2025 Delicious Food | All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

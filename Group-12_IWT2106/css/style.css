@@ -1,0 +1,299 @@
+/* Base Style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf6ec;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar & Footer */
+.navbar, footer {
+  background-color: #0d1b2a;
+}
+.navbar-brand, 
+.nav-link, 
+footer p {
+  color: #fff !important;
+}
+.navbar .nav-link:hover {
+  color: #ffb703 !important;
+  transition: color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+/* Custom Button */
+.btn-custom {
+  background-color: #f77f00;
+  color: #fff;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #e76f00;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Recipe Card */
+.recipe-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.recipe-card img {
+  width: 100%;
+  height: 220px; /* Equal height for all images */
+  object-fit: cover;
+  border-bottom: 3px solid #f77f00;
+  transition: transform 0.4s ease;
+}
+.recipe-card:hover img {
+  transform: scale(1.08); /* Smooth zoom */
+}
+.recipe-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Recipe Title & Text */
+.recipe-card .card-title {
+  font-weight: bold;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+.recipe-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Button Inside Card */
+.recipe-card .btn-custom {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+/* Search Box */
+#recipeSearch {
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: 2px solid #f77f00;
+  outline: none;
+  transition: 0.3s;
+}
+#recipeSearch:focus {
+  border-color: #e76f00;
+  box-shadow: 0 0 6px rgba(247, 127, 0, 0.6);
+}
+
+/* Navbar Scroll Effect */
+.navbar-scrolled {
+  background-color: #ff7043 !important;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  padding: 8px 0;
+}
+
+/* Footer */
+footer {
+  color: #fff;
+  text-align: center;
+}
+
+footer a {
+    text-decoration: none; /* আন্ডারলাইন সরিয়ে ফেলবে */
+}
+
+footer a:hover {
+    text-decoration: none; /* হোভার করার পরও আন্ডারলাইন থাকবে না */
+}
+
+.add-to-cart {
+  margin-left: 100px;
+}
+
+
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745; /* success color */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast.warning {
+  background: #ffc107; /* warning color */
+  color: black;
+}
+
+
+/* ⭐ Rating styles */
+#rating span {
+  font-size: 2rem;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.2s;
+}
+
+#rating span.active {
+  color: gold;
+}
+
+/* 💬 Comment styles */
+#comment-list li {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.recipe-video {
+  width: 400px;     /* ভিডিওর প্রস্থ */
+  height: 225px;    /* ভিডিওর উচ্চতা */
+  border-radius: 10px; /* কোণ গোল করার জন্য */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* হালকা shadow */
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.banner-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+}
+/* দাম দেখানোর জন্য ছোট স্টাইল */
+    .price {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #198754; /* bootstrap success color */
+      margin-top: 0.5rem;
+    }
+
+footer {
+    background: linear-gradient(135deg, #0d1b2a, #ff7043); /* সুন্দর গ্র্যাডিয়েন্ট ব্যাকগ্রাউন্ড */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffb703; /* সোশ্যাল আইকনের হোভার ইফেক্ট */
+}
+
+footer .footer-links {
+    margin-top: 20px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ffb703; /* হোভার ইফেক্ট */
+}
+
+footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* Go Back Button - Centered in Footer */
+/* Style for the Back Button */
+/* Go Back Button - Centered with .btn-secondary class */
+.btn-secondary {
+  display: inline-block; /* Inline block for centering */
+  background-color: #f77f00; /* Orange color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  margin: 20px auto; /* Center the button horizontally */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.btn-secondary:hover {
+  background-color: #e76f00; /* Darker orange on hover */
+}
+
+/* Footer container to center the button */
+.footer-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin-top: 20px;
+}
