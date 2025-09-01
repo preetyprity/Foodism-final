@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cartItems.innerHTML = "";
 
     if (cart.length === 0) {
-      cartItems.innerHTML = <li class="list-group-item text-center text-danger">🛒 Your cart is empty.</li>;
+      cartItems.innerHTML = `<li class="list-group-item text-center text-danger">🛒 Your cart is empty.</li>`;
       return;
     }
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const totalLi = document.createElement("li");
     totalLi.className = "list-group-item d-flex justify-content-between align-items-center fw-bold bg-light";
-    totalLi.innerHTML = <span>Total Price:</span> <span>৳${totalPrice.toFixed(2)}</span>;
+    totalLi.innerHTML = `<span>Total Price:</span> <span>৳${totalPrice.toFixed(2)}</span>`;
     cartItems.appendChild(totalLi);
 
     document.querySelectorAll(".remove-btn").forEach(button => {
@@ -105,20 +105,20 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateReceiptText(items, subtotal, vat, grandTotal, date, paymentMethod) {
     let lines = [
       "Receipt",
-      Date: ${date},
-      Payment Method: ${paymentMethod},
+      `Date: ${date}`,
+      `Payment Method: ${paymentMethod}`,
       "Items:"
     ];
     items.forEach(item => {
       const price = parseFloat(item.price);
       const quantity = item.quantity || 1;
       const itemTotal = price * quantity;
-      lines.push(- ${item.name} x${quantity}: ৳${itemTotal.toFixed(2)});
+      lines.push(`- ${item.name} x${quantity}: ৳${itemTotal.toFixed(2)}`);
     });
     lines.push(
-      Subtotal: ৳${subtotal.toFixed(2)},
-      VAT (5%): ৳${vat.toFixed(2)},
-      Grand Total: ৳${grandTotal.toFixed(2)},
+      `Subtotal: ৳${subtotal.toFixed(2)}`,
+      `VAT (5%): ৳${vat.toFixed(2)}`,
+      `Grand Total: ৳${grandTotal.toFixed(2)}`,
       "Thank you for your purchase!"
     );
     return lines.join("\n");
@@ -132,11 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const paymentMethod = paymentMethodSelect.value;
     if (!paymentMethod) {
-      alert("⚠ Please select a payment method!");
+      alert("⚠️ Please select a payment method!");
       return;
     }
 
-    alert(🎉 Order placed successfully!\nPayment Method: ${paymentMethod});
+    alert(`🎉 Order placed successfully!\nPayment Method: ${paymentMethod}`);
 
     const { html, text } = generateReceipt(cart, paymentMethod);
     receiptSection.innerHTML = html;
