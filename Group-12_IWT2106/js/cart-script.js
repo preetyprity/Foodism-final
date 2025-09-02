@@ -1,4 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // CSS inject করা
+  const style = document.createElement('style');
+  style.textContent = `
+  .qty-control {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #2588ebff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  
+  .qty-control button {
+    background-color: #f8f9fa;
+    border: none;
+    color: #495057;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+  }
+  
+  .qty-control button:hover {
+    background-color: #eea2daff;
+  }
+  
+  .qty-control input {
+    width: 40px;
+    height: 32px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #212529;
+    pointer-events: none;
+    background-color: white;
+    user-select: none;
+  }
+  `;
+  document.head.appendChild(style);
+
   const cartItems = document.getElementById("cartItems");
   const orderNow = document.getElementById("orderNow");
   const receiptSection = document.getElementById("receiptSection");
@@ -28,7 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
       li.innerHTML = `
         <span>
           <strong>${item.name}</strong>
-          <span class="text-muted small">x${quantity}</span>
+          <div class="qty-control ms-3">
+            <button class="decrease" data-index="${index}">−</button>
+            <input type="text" value="${quantity}" readonly />
+            <button class="increase" data-index="${index}">+</button>
+          </div>
         </span>
         <span>
           ৳${itemTotal.toFixed(2)}
@@ -44,12 +90,35 @@ document.addEventListener("DOMContentLoaded", function () {
     totalLi.innerHTML = `<span>Total Price:</span> <span>৳${totalPrice.toFixed(2)}</span>`;
     cartItems.appendChild(totalLi);
 
+    // Remove buttons
     document.querySelectorAll(".remove-btn").forEach(button => {
       button.addEventListener("click", () => {
         const index = parseInt(button.getAttribute("data-index"));
         cart.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
         renderCart();
+      });
+    });
+
+    // Increase buttons
+    document.querySelectorAll(".increase").forEach(button => {
+      button.addEventListener("click", () => {
+        const index = parseInt(button.getAttribute("data-index"));
+        cart[index].quantity = (cart[index].quantity || 1) + 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      });
+    });
+
+    // Decrease buttons
+    document.querySelectorAll(".decrease").forEach(button => {
+      button.addEventListener("click", () => {
+        const index = parseInt(button.getAttribute("data-index"));
+        if ((cart[index].quantity || 1) > 1) {
+          cart[index].quantity = cart[index].quantity - 1;
+          localStorage.setItem("cart", JSON.stringify(cart));
+          renderCart();
+        }
       });
     });
   }
